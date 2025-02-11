@@ -1,7 +1,7 @@
 const btnGerar = document.getElementById('btnGerar');
 const corFundo = document.getElementById('corFundo');
 const codigoCor = document.getElementById('codigoCor');
-
+const btnCopiar = document.getElementById('btnCopiar')
 // Função para gerar a cor aleatória
 function gerarCorAleatoria() {
     const letras = '0123456789ABCDEF';
@@ -23,3 +23,13 @@ btnGerar.addEventListener('click', () => {
     const cor = gerarCorAleatoria();
     atualizarInterface(cor);
 });
+
+btnCopiar.addEventListener('click', () => {
+    const codigo = codigoCor.textContent.replace('Código da cor: ','')
+    navigator.clipboard.writeText(codigo).then(() => {
+        alert('Código copiado: ' + codigo);
+    }).catch(err => {
+        console.error('Erro ao copiar', err);
+    })
+
+})
