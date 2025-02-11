@@ -1,0 +1,39 @@
+* {
+    border: black solid 1px;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    #btnGerar {
+        padding: 10px 20px;
+        font-size: 18px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #btnGerar:hover {
+        background-color: #45a049;
+    }
+    
+    #corFundo {
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+        border: 1px solid #ccc;
+        display: inline-block;
+        transition: background-color 1s ease;    }
+    
