@@ -25,11 +25,12 @@ btnGerar.addEventListener('click', () => {
 });
 
 btnCopiar.addEventListener('click', () => {
-    const codigo = codigoCor.textContent.replace('Código da cor: ','')
+    const codigo = codigoCor.textContent.replace('Código da cor: ', ''); // Remove o texto antes do código
     navigator.clipboard.writeText(codigo).then(() => {
-        alert('Código copiado: ' + codigo);
+        btnCopiar.textContent = "Copiado!";
+        setTimeout(() => btnCopiar.textContent = "Copiar Código", 2000)
     }).catch(err => {
         console.error('Erro ao copiar', err);
-    })
+    });
 
 })
